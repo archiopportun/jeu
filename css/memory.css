@@ -1,0 +1,307 @@
+h1 {
+    margin: 30px;
+}
+
+html {
+    font-family: 'Roboto';
+}
+
+header{
+    position: fixed;
+    background-color:white;
+    box-shadow: 0px -10px 20px grey;
+    margin: 0;
+    width: 100vw;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header h1{
+    margin: auto 30px;
+}
+
+#resultat{
+    display: flex;
+    position: relative;
+    min-width: 80px;
+}
+
+#resultatDe{
+    margin: auto 15px;
+}
+
+.resultatDe{
+    width: 50px;
+}
+
+#resultat1{
+    margin: 15px;
+}
+
+#resultat2{
+    margin: 15px;
+}
+
+#resultat3{
+    margin: 15px;
+}
+
+#resultat4{
+    margin: 15px 30px 15px 15px;
+}
+
+.resultatCartes1{
+    width: 70px;
+    margin: 3px ;
+}
+
+.resultatCartes2{
+    width: 70px;
+    margin: 3px ;
+}
+
+.resultatCartes3{
+    width: 70px;
+    margin: 3px;
+}
+
+.resultatCartes4{
+    width: 70px;
+    margin: 3px;
+}
+
+.etape:not(.regle) {
+    position: relative;
+    width: 100wv;
+    min-height: 80vh;
+    margin: 30px;
+}
+
+/*************************************    REGLE    **********************************/
+
+.haut{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.haut div{
+    border: solid black 1.5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.haut div:first-of-type{
+    width: 40%;
+    margin-right: 20px;
+}
+
+.bas{
+    border: solid black 1.5px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.lesEtapes{
+    display: flex;
+}
+
+.lesEtapes div{
+    width: 20%;  
+    display: flex;
+    flex-direction: column;
+}
+
+
+.regle {
+    height: calc(100% - 140px);
+    margin: 150px 30px 50px;
+}
+
+.regle h2{
+    font-size: 25px;
+}
+
+.deBut{
+    width: 100px;
+    margin: 0;
+    right: 0;
+    align-self:center;
+}
+
+.cEtape2{
+    width: 60%;
+    align-self:center;
+}
+
+.cEtape3{
+    width: 40%;
+    align-self:center;
+}
+
+.cEtape4{
+    margin-top: 10px;
+    width: 40%;
+    align-self:center;
+}
+
+.cEtape5{
+    width: 40%;
+    align-self:center;
+}
+
+.lesEtapes p{
+    margin: 0px 0 10px;
+}
+
+.lesEtapes h3{
+    margin: 0 0 10px;
+}
+
+.un h3{
+    margin-top: 20px;
+}
+
+/*****************************************   ETAPE 1 *****************************/
+#des img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 130px;
+    /*
+    border: black solid 2px;
+    border-radius: 5%;
+*/
+}
+
+#des {
+    width: 60%;
+    margin: auto auto 50px;
+    padding-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.bouton1 {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    border: solid black 1px;
+    background: white;
+    font: 20px Roboto;
+    color: black;
+    display: block;
+    margin: auto;
+}
+
+.etape1 p:first-of-type::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #E07B11;
+    margin: 0 10px;
+    top: 3px;
+    position: relative;
+}
+
+
+.etape1 p:nth-of-type(2)::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #082312;
+    margin: 0 10px;
+    top: 3px;
+    position: relative;
+}
+
+/*****************************************   ETAPE 2 ********************************/
+.etape2{
+    height: 100%;
+}
+
+
+#jeuCartesOrange{
+    margin-top: 5%;
+}
+
+#jeuCartesNoir, #jeuCartesOrange {
+      margin: 10px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+/*Retournement des cartes : principe du flip  */
+.flip {
+    margin: 10px 10px;
+    width: 140px;
+    position: relative;
+    transition: transform 500ms ease;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+
+}
+
+.flip img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+}
+
+.flip img {
+    box-shadow: 0 0 0px black;
+    display: block;
+    width: 140px;
+}
+
+.flip img:first-child {
+    transform: rotateX(180deg);
+    top: 0;
+    left: 0;
+}
+
+.face {
+    transform: rotateX(180deg);
+}
+
+/*
+.etape3{
+    height: 100%;
+}*/
+
+
+/********************************    ETAPE 3 ***********************************/
+
+#programme{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 10px auto;
+    justify-content: space-around;
+}
+
+
+/***********************************    ETAPE 4 ***************************/
+
+#oppoArchi{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 10px auto;
+    justify-content: space-around;
+}
