@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>ARCHI OPPORTUN</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="shortcut icon" href="./images/de.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body id="jeu">
+    <header>
+        <div id="menuBurger">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="methodologie.html">LA MÉTHODOLOGIE</a></li>
+                <li><a href="jeu.html">LE JEU</a></li>
+                <li><a href="bibliotheque.html">LA BIBLIOTHÈQUE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="entete">
+            <a href="index.html" class="archiOppo">
+                <h1>ARCHI OPPORTUN</h1>
+            </a>
+            <div id="resultat">
+                <div id="resultatDe"></div>
+                <div id="resultat1"></div>
+                <div id="resultat2"></div>
+                <div id="resultat3"></div>
+                <div id="resultat4"></div>
+                <div id="resultat5"></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="section">
+        <section class="etape etape1" id="page2">
+            <h2 class="titre1">ÉTAPE 1</h2>
+            <p>GISEMENTS DE MATÉRIAUX OPPORTUNS ET STRUCTURANTS</p>
+            <p>GISEMENTS DE MATÉRIAUX OPPORTUNS</p>
+            <div id="des">
+                <img src="images/DES/d%C3%A9d%C3%A9.jpg" data-de="1">
+                <img src="images/DES/d%C3%A9d%C3%A92.jpg" data-de="2">
+                <img src="images/DES/d%C3%A9d%C3%A93.jpg" data-de="3">
+                <img src="images/DES/d%C3%A9d%C3%A94.jpg" data-de="4">
+                <img src="images/DES/d%C3%A9d%C3%A95.jpg" data-de="5">
+                <img src="images/DES/d%C3%A9d%C3%A96.jpg" data-de="6">
+                <img src="images/DES/d%C3%A9d%C3%A97.jpg" data-de="7">
+                <img src="images/DES/d%C3%A9d%C3%A98.jpg" data-de="8">
+                <img src="images/DES/d%C3%A9d%C3%A99.jpg" data-de="9">
+            </div>
+
+            <button value="" class="bouton1">Lancer le dé</button>
+            <a href="#page3" class="bouton2">Étape suivante </a>
+        </section>
+
+        <section class="etape etape2" id="page3">
+            <h2>ÉTAPE 2 </h2>
+            <p class="consigne">Tirer les cartes structurantes</p>
+            <div id="jeuCartesOrange">
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(1).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(2).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(3).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(4).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(5).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(6).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(7).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/orange/carteOrange%20(8).jpg" />
+                    <img src="./images/CARTES/orange/dosOrange.svg" />
+                </div>
+            </div>
+            <p class="consigne">Tirer les cartes non structurantes</p>
+            <div id="jeuCartesNoir">
+
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(1).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(2).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(3).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(4).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(5).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(6).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(7).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(8).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(9).jpg">
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-etat="">
+                    <img src="./images/CARTES/noir/carteNoire%20(10).jpg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+
+            </div>
+            <a href="#page4" class="bouton3">Étape suivante </a>
+        </section>
+
+        <section class="etape" id="page4">
+            <h2>ÉTAPE 3</h2>
+            <div id="programme">
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(1).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(2).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(3).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(4).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(5).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(6).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/programme/programme%20(7).svg" alt="carte du loup garou" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" alt="dos de la carte" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/programme/programme%20(8).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/programme/programme%20(9).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/programme/programme%20(10).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+            </div>
+            <a href="#page5" class="bouton4">Étape suivante </a>
+        </section>
+
+        <section class="etape" id="page5">
+            <h2>ÉTAPE 4</h2>
+            <div id="oppoArchi">
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(1).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(2).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(3).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(4).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(5).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(6).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(7).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(8).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(9).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(10).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(11).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(12).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(13).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(14).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+            </div>
+            <a href="#page6" class="bouton5">Étape suivante </a>
+        </section>
+
+        <section class="etape" id="page6">
+            <h2>ÉTAPE 5</h2>
+            <div id="site">
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(1).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(2).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(3).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(4).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(5).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(6).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip" data-carte="loup">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(7).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(8).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(9).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(10).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(11).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(12).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(13).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+                <div class="flip">
+                    <img src="./images/CARTES/oppoArchi/oppoArchi%20(14).svg" />
+                    <img src="./images/CARTES/noir/dosNoir.svg" />
+                </div>
+            </div>
+            <a href="#bilan" class="bouton6">Voir le résultat</a>
+
+        </section>
+
+        <section class="etape page7" id="bilan">
+            <h2>RÉSULTAT</h2>
+
+            <div id="resultatBilan">
+                <div class="ligne1">
+                    <div id="bilanDe"></div>
+                    <div id="bilan1"></div>
+                    <div id="bilan2"></div>
+                </div>
+                <div class="ligne2">
+                    <div id="bilan3"></div>
+                    <div id="bilan4"></div>
+                    <div id="bilan5"></div>
+                </div>
+            </div>
+                <input type="button" value="Rejouer" id="btnRecommencer" class="bouton7" />
+        </section>
+    </div>
+
+    <footer>
+        <p>Amélie Paquet, Aliah Mouttou, Hyuna Kim, Sarah Yagmur, Léa Bilbot © 2020 - Tous droits réservés</p>
+    </footer>
+
+
+
+</body>
+
+</html>
