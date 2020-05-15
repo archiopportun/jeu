@@ -23,18 +23,21 @@
     var carteOP;
     var carteS;
     var de1;
-    var x = 0;
+    var orange = 0;
+    var noir = 0;
     var o = 0;
     var n = 0;
+    var x = 0;
     var uneImg;
+    var nb = 0;
 
     function initialiser(evt) {
-        var lesImgO = document.getElementById("jeuCartesOrange").getElementsByClassName("flip");
+        var lesImgO = document.getElementById("jeuCartes").getElementsByClassName("flip");
         for (uneImg of lesImgO) {
-            uneImg.addEventListener("click", clickCarteOrange, true);
+            uneImg.addEventListener("click", clickCarte, true);
 
 
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
+            var alea = Math.floor(Math.random() * (27 - (0))) - 1;
             uneImg.style.order = alea;
         }
 
@@ -53,7 +56,7 @@
             var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
             uneImg.style.order = alea;
         }
-        
+
         var lesImgS = document.getElementById("site").getElementsByClassName("flip");
         for (uneImg of lesImgS) {
             uneImg.addEventListener("click", etape5, true);
@@ -86,42 +89,45 @@
 
 
         if (de1 == 1) {
-            img.src = "images/DES/d%C3%A9d%C3%A9.jpg";
+            img.src = "images/DES/de%20(1).png";
             o = 1;
             n = 1;
         } else if (de1 == 2) {
-            img.src = "images/DES/d%C3%A9d%C3%A92.jpg";
+            img.src = "images/DES/de%20(2).png";
             o = 1;
             n = 2;
         } else if (de1 == 3) {
-            img.src = "images/DES/d%C3%A9d%C3%A93.jpg";
-            o = 2;
-            n = 1;
-        } else if (de1 == 4) {
-            img.src = "images/DES/d%C3%A9d%C3%A94.jpg";
+            img.src = "images/DES/de%20(3).png";
             o = 2;
             n = 2;
+        } else if (de1 == 4) {
+            img.src = "images/DES/de%20(4).png";
+            o = 2;
+            n = 3;
         } else if (de1 == 5) {
-            img.src = "images/DES/d%C3%A9d%C3%A95.jpg";
-            o = 1;
-            n = 3;
-        } else if (de1 == 6) {
-            img.src = "images/DES/d%C3%A9d%C3%A96.jpg";
+            img.src = "images/DES/de%20(5).png";
             o = 2;
-            n = 3;
-        } else if (de1 == 7) {
-            img.src = "images/DES/d%C3%A9d%C3%A97.jpg";
-            o = 1;
             n = 4;
-        } else if (de1 == 8) {
-            img.src = "images/DES/d%C3%A9d%C3%A98.jpg";
+        } else if (de1 == 6) {
+            img.src = "images/DES/de%20(6).png";
             o = 2;
+            n = 1;
+        } else if (de1 == 7) {
+            img.src = "images/DES/de%20(7).png";
+            o = 1;
+            n = 3;
+        } else if (de1 == 8) {
+            img.src = "images/DES/de%20(8).png";
+            o = 1;
             n = 4;
         } else if (de1 == 9) {
-            img.src = "images/DES/d%C3%A9d%C3%A99.jpg";
+            img.src = "images/DES/de%20(9).png";
             o = 3;
             n = 3;
         }
+
+        nb = o + n;
+
         img.style.margin = "0%";
         document.getElementById("des").appendChild(img);
 
@@ -135,74 +141,63 @@
 
         console.log("nombre de carte oranges : " + o);
         console.log("nombre de carte noires : " + n);
+        console.log("nombre de cartes : " + nb);
+
+        document.querySelector(".bouton2").addEventListener("click", supprimerPage, true);
     }
 
-    function clickCarteOrange(evt) {
+    function clickCarte(evt) {
         if (this.dataset.etat == "retournee") {
             console.log("déja retournée");
-        } else {
+        } else if (this.dataset.couleur == "orange" && orange == o) {
+            console.log("trop de orange");
+        } else if (this.dataset.couleur == "orange") {
+            orange = orange + 1;
             this.classList.add("face");
+            this.lastElementChild.remove();
             var data = this.dataset.etat = "retournee";
 
             if (carteO1 == null) {
                 evt.preventDefault();
                 carteO1 = this;
-                x = x + 1;
                 if (o == 1) {
-                    x = 0;
                     window.setTimeout(ajouterO1, 500);
-                    document.getElementById("jeuCartesOrange").addEventListener("click", stop, true);
                 }
-            } else if (carteO2 == null && x <= o) {
+            } else if (carteO2 == null && orange <= o) {
                 evt.preventDefault();
                 carteO2 = this;
-                x = x + 1;
                 if (o == 2) {
-                    x = 0;
                     window.setTimeout(ajouterO2, 500);
-                    document.getElementById("jeuCartesOrange").addEventListener("click", stop, true);
                 }
-            } else if (carteO3 == null && x <= o) {
+            } else if (carteO3 == null && orange <= o) {
                 evt.preventDefault();
                 carteO3 = this;
-                x = x + 1;
                 if (o == 3) {
-                    x = 0;
                     window.setTimeout(ajouterO3, 500);
-                    document.getElementById("jeuCartesOrange").addEventListener("click", stop, true);
                 }
             }
-
-
-        }
-    }
-
-    function clickCarteNoir(evt) {
-        if (this.dataset.etat == "retournee") {
-            console.log("déja retournée");
+        } else if (this.dataset.couleur == "noir" && noir == n) {
+            console.log("trop de noir");
         } else {
+            noir = noir + 1;
             this.classList.add("face");
+            this.lastElementChild.remove();
             var data = this.dataset.etat = "retournee";
 
             if (carteN1 == null) {
                 carteN1 = this;
                 if (n == 1) {
                     window.setTimeout(ajouterN1, 500);
-                    document.getElementById("jeuCartesNoir").addEventListener("click", stop, true);
                 }
-            } else if (carteN2 == null && x <= n) {
+            } else if (carteN2 == null && noir <= n) {
                 carteN2 = this;
-                x = x + 1;
                 if (n == 2) {
                     window.setTimeout(ajouterN2, 500);
-                    document.getElementById("jeuCartesNoir").addEventListener("click", stop, true);
                 }
-            } else if (carteN3 == null && x <= n) {
+            } else if (carteN3 == null && noir <= n) {
                 carteN3 = this;
-                x = x + 1;
                 if (n == 3) {
                     window.setTimeout(ajouterN3, 500);
-                    document.getElementById("jeuCartesNoir").addEventListener("click", stop, true);
                 }
             } else if (carteN4 == null && x <= n) {
                 carteN4 = this;
@@ -210,11 +205,22 @@
 
                 if (n == 4) {
                     window.setTimeout(ajouterN4, 500);
-                    document.getElementById("jeuCartesNoir").addEventListener("click", stop, true);
                 }
             }
-
         }
+
+        console.log(orange + noir);
+
+        if (orange + noir == nb) {
+            document.querySelector(".bouton3").style.display = "block";
+            document.getElementById("jeuCartes").addEventListener("click", stop, true);
+        }
+
+
+    }
+
+    function supprimerPage(evt) {
+        document.querySelector("#page2").remove();
     }
 
     function stop(evt) {
@@ -228,15 +234,7 @@
         clone11.classList.add("bilanCartes1");
         document.getElementById("resultat1").append(clone1);
         document.getElementById("bilan1").append(clone11);
-        var lesCartes = document.getElementById("jeuCartesOrange");
-        
-        var lesImgN = document.getElementById("jeuCartesNoir").getElementsByClassName("flip");
-        for (uneImg of lesImgN) {
-            uneImg.addEventListener("click", clickCarteNoir, true);
 
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
 
     }
 
@@ -247,9 +245,6 @@
         clone11.classList.add("bilanCartes2");
         document.getElementById("resultat2").append(clone1);
         document.getElementById("bilan2").append(clone11);
-        var lesCartes = document.getElementById("jeuCartesNoir");
-        document.querySelector(".bouton3").style.display = "block";
-        document.querySelector("#page2").remove();
     }
 
     function ajouterO2(evt) {
@@ -265,16 +260,8 @@
         document.getElementById("bilan1").append(clone11);
         document.getElementById("resultat1").append(clone2);
         document.getElementById("bilan1").append(clone21);
-        var lesCartes = document.getElementById("jeuCartesOrange");var lesImgN = 
-        
-            
-        document.getElementById("jeuCartesNoir").getElementsByClassName("flip");
-        for (uneImg of lesImgN) {
-            uneImg.addEventListener("click", clickCarteNoir, true);
 
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
+
 
     }
 
@@ -291,10 +278,6 @@
         document.getElementById("bilan2").append(clone11);
         document.getElementById("resultat2").append(clone2);
         document.getElementById("bilan2").append(clone21);
-
-        var lesCartes = document.getElementById("jeuCartesNoir");
-        document.querySelector(".bouton3").style.display = "block";
-        document.querySelector("#page2").remove();
     }
 
     function ajouterO3(evt) {
@@ -318,15 +301,7 @@
         document.getElementById("resultat1").append(clone3);
         document.getElementById("bilan1").append(clone31);
 
-        var lesCartes = document.getElementById("jeuCartesOrange");
 
-        var lesImgN = document.getElementById("jeuCartesNoir").getElementsByClassName("flip");
-        for (uneImg of lesImgN) {
-            uneImg.addEventListener("click", clickCarteNoir, true);
-
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
     }
 
     function ajouterN3(evt) {
@@ -348,10 +323,6 @@
         document.getElementById("bilan2").append(clone21);
         document.getElementById("resultat2").append(clone3);
         document.getElementById("bilan2").append(clone31);
-
-        var lesCartes = document.getElementById("jeuCartesNoir");
-        document.querySelector(".bouton3").style.display = "block";
-        document.querySelector("#page2").remove();
     }
 
     function ajouterN4(evt) {
@@ -379,14 +350,11 @@
         clone31.classList.add("bilanCartes2");
         clone4.classList.add("resultatCartes2");
         clone41.classList.add("bilanCartes2");
-        var lesCartes = document.getElementById("jeuCartesOrange");
-        document.querySelector(".bouton3").style.display = "block";
-        document.querySelector("#page2").remove();
-
     }
 
     function etape3(evt) {
         this.classList.add("face");
+        this.lastElementChild.remove();
         this.removeEventListener("click", etape3);
         carteP1 = this;
         window.setTimeout(ajouterP1, 500);
@@ -409,8 +377,9 @@
 
     function etape4(evt) {
         this.classList.add("face");
+        this.lastElementChild.remove();
         this.removeEventListener("click", etape4);
-        carteOP= this;
+        carteOP = this;
         window.setTimeout(ajouterOP, 500);
         document.getElementById("oppoArchi").addEventListener("click", stop, true);
     }
@@ -422,13 +391,14 @@
         clone11.classList.add("bilanCartes4");
         document.getElementById("resultat4").append(clone1);
         document.getElementById("bilan4").append(clone11);
-document.querySelector(".bouton5").style.display = "block";
+        document.querySelector(".bouton5").style.display = "block";
         document.querySelector("#page4").remove();
 
     }
-    
+
     function etape5(evt) {
         this.classList.add("face");
+        this.lastElementChild.remove();
         this.removeEventListener("click", etape5);
         carteS = this;
         window.setTimeout(ajouterS, 500);
@@ -442,25 +412,37 @@ document.querySelector(".bouton5").style.display = "block";
         clone11.classList.add("bilanCartes5");
         document.getElementById("resultat5").append(clone1);
         document.getElementById("bilan5").append(clone11);
-        
+
         var lesCartes = document.getElementById("site");
         document.querySelector(".bouton7").style.display = "block";
-        document.querySelector(".bouton7").addEventListener("click", rejouer, true);
-        
+        document.querySelector(".bouton7").addEventListener("click", ExportPdf, true);
+
         document.querySelector(".bouton6").style.display = "block";
-        document.querySelector(".bouton6").addEventListener("click", bilan, true);
-        
+
         document.querySelector("#page5").remove();
 
     }
-    
-    function bilan(evt){
-        document.getElementById("resultat").remove();
-    }
-
 
     function rejouer(evt) {
         window.location.reload();
+    }
+
+    function ExportPdf() {
+        kendo.drawing
+            .drawDOM("#p2", {
+                paperSize: "A4",
+                landscape: true,
+                margin: {
+                    top: "1.6cm",
+                    bottom: "1cm",
+                    left: "1cm",
+                },
+                height: 500,
+                template: $("#page-template").html()
+            })
+            .then(function (group) {
+                kendo.drawing.pdf.saveAs(group, "À toi de jouer !.pdf")
+            });
     }
 
 
