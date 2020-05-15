@@ -10,7 +10,7 @@
 
     function scroll(evt) {
         
-        var regle = document.querySelector(".regle");
+        var regle = document.querySelector(".regleA");
         regle.style.display = "block";
 
         var accueil = document.querySelector(".accueil");

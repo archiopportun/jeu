@@ -129,7 +129,6 @@ header #jouer {
 }
 
 #page2 {
-    display: block;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -522,9 +521,19 @@ header #jouer {
 }
 
 
-.regle {
+.regleA {
     padding: 130px 30px 50px;
     display: none;
+}
+
+.regle {
+    padding: 130px 30px 50px;
+    display: block;
+}
+
+
+.regleA h2 {
+    font-size: 25px;
 }
 
 .regle h2 {
