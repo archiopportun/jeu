@@ -6,9 +6,7 @@ html {
     width: 100%;
     margin: 0;
 
-    max-height: 100vh;
-    overflow: hidden;
-
+    min-height: 100vh;
 }
 
 body {
@@ -18,7 +16,7 @@ body {
 .entete {
     position: fixed;
     background-color: white;
-      -webkit-box-shadow : 0px -10px 20px grey;
+    -webkit-box-shadow: 0px -10px 20px grey;
     box-shadow: 0px -10px 20px grey;
     margin: 0;
     width: 100vw;
@@ -26,15 +24,16 @@ body {
     left: 0;
     min-height: 100px;
     display: -webkit-flex;
-    -webkit-justify-content : space-between;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    z-index: 1;
 }
 
 header #jouer {
     text-decoration: none;
     border: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -56,6 +55,24 @@ header #jouer {
     display: -webkit-flex;
     position: relative;
     min-width: 80px;
+    z-index: 2;
+}
+
+#p1{
+    display: -webkit-flex;
+    position: relative;
+    min-width: 80px;
+    z-index: 2;
+    display: inline-block;
+    margin: auto;
+}
+
+#p2{
+    display: -webkit-flex;
+    flex-direction: row;
+    position: relative;
+    min-width: 80px;
+    z-index: 2;
 }
 
 #resultatDe {
@@ -67,23 +84,23 @@ header #jouer {
 }
 
 #resultat1 {
-    margin: 7px 15px;
+    margin: 7px 7px;
 }
 
 #resultat2 {
-    margin: 7px 15px;
+    margin: 7px 7px;
 }
 
 #resultat3 {
-    margin: 7px 15px;
+    margin: 7px 7px;
 }
 
 #resultat4 {
-    margin: 7px 15px;
+    margin: 7px 7px;
 }
 
 #resultat5 {
-    margin: 7px 30px 7px 15px;
+    margin: 7px 30px 7px 7px;
 }
 
 .resultatCartes1 {
@@ -112,11 +129,13 @@ header #jouer {
 }
 
 #page2 {
+    display: block;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    padding: 130px 0 0;
-    height: 84vh;
+    padding: 130px 0 30px;
+    min-height: calc(100vh - 200px);
+
     overflow: hidden;
     margin: 0px 30px 20px;
 }
@@ -133,8 +152,9 @@ header #jouer {
     flex-direction: column;
     position: relative;
     margin: 0px 30px 20px;
-    padding: 130px 0 0;
-    height: calc(100vh - 160px);
+    padding: 130px 0 30px;
+    height: auto;
+    overflow: hidden;
 }
 
 #page4 {
@@ -148,8 +168,9 @@ header #jouer {
     flex-direction: column;
     position: relative;
     margin: 0px 30px 20px;
-    padding: 130px 0 0;
-    height: calc(100vh - 160px);
+    padding: 130px 0 30px;
+    min-height: calc(100vh - 200px);
+    height: auto;
 }
 
 #page5 {
@@ -163,8 +184,9 @@ header #jouer {
     flex-direction: column;
     position: relative;
     margin: 0px 30px 20px;
-    padding: 130px 0 0;
-    height: calc(100vh - 160px);
+    padding: 130px 0 30px;
+    min-height: calc(100vh - 200px);
+    height: auto;
 }
 
 #page6 {
@@ -178,8 +200,9 @@ header #jouer {
     flex-direction: column;
     position: relative;
     margin: 0px 30px 20px;
-    padding: 130px 0 0;
-    height: calc(100vh - 160px);
+    padding: 130px 0 30px;
+    min-height: calc(100vh - 200px);
+    height: auto;
 }
 
 #bilan {
@@ -193,21 +216,19 @@ header #jouer {
     flex-direction: column;
     position: relative;
     margin: 0px 30px 20px;
-    padding: 130px 0 0;
-    height: calc(100vh - 160px);
+    padding: 130px 0 30px;
+    min-height: calc(100vh - 200px);
+    height: auto;
 }
 
 #resultatBilan {
-    display:-webkit-flex;
+    display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     position: relative;
     min-width: 80px;
 }
 
-#bilanDe {
-    margin: auto 1vw;
-}
 
 .bilanDe {
     width: 13vh;
@@ -259,7 +280,7 @@ header #jouer {
 }
 
 .ligne1 {
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
     display: -webkit-flex;
 }
@@ -305,7 +326,7 @@ header #jouer {
     position: absolute;
     top: -5px;
     cursor: pointer;
-    -webkit-opacity : 0;
+    -webkit-opacity: 0;
     opacity: 0;
     /* hide this */
     z-index: 2;
@@ -321,7 +342,7 @@ header #jouer {
     margin-bottom: 5px;
     position: relative;
     background: #232323;
-    -webkit-border-radius : 3px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     z-index: 1;
     -webkit-transform-origin: 4px 0px;
@@ -345,15 +366,15 @@ header #jouer {
 }
 
 #menuBurger input:checked ~ span {
-    -webkit-opacity : 1;
+    -webkit-opacity: 1;
     opacity: 1;
-    -webkit-transform : rotate(45deg) translate(0px, 0px);
+    -webkit-transform: rotate(45deg) translate(0px, 0px);
     transform: rotate(45deg) translate(0px, 0px);
     background: white;
 }
 
 #menuBurger input:checked ~ span:nth-last-child(3) {
-    -webkit-opacity : 0;
+    -webkit-opacity: 0;
     opacity: 0;
     -webkit-transform: rotate(0deg) scale(0.4, 0.2);
     transform: rotate(0deg) scale(0.4, 0.2);
@@ -371,7 +392,7 @@ header #jouer {
     top: 0;
     right: 0px;
     display: -webkit-flex;
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -408,7 +429,6 @@ header #jouer {
 /******************************     ACCUEIL     *********************************/
 
 .accueil {
-    height: 100vh;
     display: -webkit-flex;
     text-align: center;
     z-index: 5;
@@ -416,10 +436,13 @@ header #jouer {
     position: absolute;
     width: 100%;
     top: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
 
 .accueil h2 {
+    overflow: hidden;
     margin: auto;
     font-size: 50px;
 }
@@ -431,7 +454,7 @@ header #jouer {
     bottom: 4%;
     z-index: 13;
     left: 47%;
-    -webkit-animation :  shake 1s infinite;
+    -webkit-animation: shake 1s infinite;
     animation: shake 1s infinite;
 }
 
@@ -461,7 +484,7 @@ header #jouer {
 
 .haut div {
     border: solid black 1.5px;
-    -webkit-border-radius : 20px;
+    -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 0 20px;
 }
@@ -478,19 +501,21 @@ header #jouer {
 
 .bas {
     border: solid black 1.5px;
-    -webkit-border-radius : 20px;
+    -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 10px 20px;
 }
 
 .lesEtapes {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .lesEtapes div {
-    width: 20%;
+    width: 16%;
     display: -webkit-flex;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -499,6 +524,7 @@ header #jouer {
 
 .regle {
     padding: 130px 30px 50px;
+    display: none;
 }
 
 .regle h2 {
@@ -509,32 +535,38 @@ header #jouer {
     width: 100px;
     margin: 0;
     right: 0;
-    -webkit-align-self : center;
+    -webkit-align-self: center;
     align-self: center;
 }
 
 .cEtape2 {
     width: 60%;
-     -webkit-align-self : center;
+    -webkit-align-self: center;
     align-self: center;
 }
 
 .cEtape3 {
     width: 40%;
-     -webkit-align-self : center;
+    -webkit-align-self: center;
     align-self: center;
 }
 
 .cEtape4 {
     margin-top: 10px;
     width: 40%;
-     -webkit-align-self : center;
+    -webkit-align-self: center;
     align-self: center;
 }
 
 .cEtape5 {
+    width: 36%;
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+.cEtape6 {
     width: 40%;
-     -webkit-align-self : center;
+    -webkit-align-self: center;
     align-self: center;
 }
 
@@ -553,28 +585,29 @@ header #jouer {
 /*****************************************   ETAPE 1 *****************************/
 #des img {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    max-width: 17vh;
-    max-height: 17vh;
+    width: 12vh;
+    height: 12vh;
+    margin: 1vh;
 }
 
 #des {
-    width: 85vh;
+    width: 95vh;
+    height: 28vh;
     margin: 0 auto;
     padding-top: 2%;
-    display:-webkit-flex;
-    -webkit-flex-wrap : wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
-    min-height: 34vh;
 }
 
 .bouton1 {
     border: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -587,7 +620,7 @@ header #jouer {
 .bouton2 {
     text-decoration: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -602,7 +635,7 @@ header #jouer {
 .bouton3 {
     text-decoration: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -632,7 +665,7 @@ header #jouer {
 .bouton5 {
     text-decoration: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -647,7 +680,7 @@ header #jouer {
 .bouton6 {
     text-decoration: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -662,7 +695,7 @@ header #jouer {
 .bouton7 {
     text-decoration: none;
     padding: 15px;
-    -webkit-border-radius : 8px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
     border: solid black 1px;
     background: white;
@@ -720,25 +753,20 @@ header #jouer {
 
 }
 
-#jeuCartesOrange {
-    margin-top: 5%;
-}
-
-#jeuCartesNoir,
-#jeuCartesOrange {
+#jeuCartes {
     margin: 10px auto;
-    width: 90%;
+    width: 153vh;
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
 }
 
 /*Retournement des cartes : principe du flip  */
 .flip {
-    margin: 10px 10px;
-    width: 100px;
+    margin: 1vh 1vh;
+    width: 15vh;
     position: relative;
     -webkit-transition: -webkit-transform 500ms ease;
     transition: -webkit-transform 500ms ease;
@@ -757,10 +785,10 @@ header #jouer {
 }
 
 .flip img {
-    -webkit-box-shadow : 0 0 0px black;
+    -webkit-box-shadow: 0 0 0px black;
     box-shadow: 0 0 0px black;
     display: block;
-    width: 100px;
+    width: 15vh;
 }
 
 .flip img:first-child {
@@ -779,11 +807,11 @@ header #jouer {
 
 #programme {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 60%;
+    width: 85vh;
     margin: 10px auto;
-    -webkit-justify-content : space-around;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 
@@ -792,11 +820,11 @@ header #jouer {
 
 #oppoArchi {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 80%;
+    width: 119vh;
     margin: 10px auto;
-    -webkit-justify-content : space-around;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 
@@ -804,11 +832,11 @@ header #jouer {
 
 #site {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 80%;
+    width: 102vh;
     margin: 10px auto;
-    -webkit-justify-content : space-around;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
 }
 
@@ -821,15 +849,17 @@ header #jouer {
 footer p {
     position: fixed;
     display: -webkit-flex;
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-align-items : center;
+    -webkit-align-items: center;
     align-items: center;
     margin: 0;
     width: 100vw;
     bottom: 0;
     height: 30px;
     font-size: 0.7rem;
+
+    background-color: white;
 }
 
 footer {
@@ -846,9 +876,9 @@ footer {
 
 .lesPortraits {
     display: -webkit-flex;
-    -webkit-flex-wrap : wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content : center;
+    -webkit-justify-content: center;
     justify-content: center;
 
 }
@@ -866,4 +896,96 @@ footer {
 .portrait p {
     text-align: center;
     font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-template {
+    font-family: 'arial';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.page-template .header {
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.page-template .footer {
+    position: absolute;
+    font-size: 8px;
+    bottom: 1.5%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: black;
+}
+
+.page-template .rect{
+    content: "";
+    border: solid black 1px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 4%;
+    height: 61%;
+    width: 94%;
+    left: 3%;
+}
+
+.page-template .rectResultat{
+    content: "";
+    border: solid black 1px;
+    border-radius: 8px;
+    position: absolute;
+    top:7%;
+    height: 21%;
+    width: 94%;
+    left: 3%;
+}
+
+.page-template .body{
+    font-size: 0.8rem;
+    position: absolute;
+    left: 3%;
+    bottom: calc(25px + 62%);
 }
