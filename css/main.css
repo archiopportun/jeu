@@ -721,7 +721,7 @@ header #jouer {
     z-index: -10;
 }
 
-.etape1 p:first-of-type::before {
+.etape1 p:nth-of-type(2)::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -736,8 +736,19 @@ header #jouer {
     z-index: 0;
 }
 
+.etape1 p{
+    margin: 10px 0 5px 0;
+}
 
-.etape1 p:nth-of-type(2)::before {
+.titre1{
+    margin-bottom: 15px;
+}
+
+.etape1 p:first-of-type{
+    margin: 0 10px 0 40px;
+}
+
+.etape1 p:nth-of-type(3)::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -755,11 +766,12 @@ header #jouer {
 /*****************************************   ETAPE 2 ********************************/
 .etape2 {
     height: 100%;
+    
 }
 
-.consigne {
-    margin: 0 0 0 40px;
-
+.consignes {
+    margin: 0 0 10px 40px;
+font-size: 20px;
 }
 
 #jeuCartes {
