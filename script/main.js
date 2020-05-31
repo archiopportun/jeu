@@ -68,6 +68,8 @@
         var button1 = document.querySelector(".bouton1");
 
         button1.addEventListener('click', etape1, true);
+        
+        
     }
 
 
@@ -144,6 +146,10 @@
         console.log("nombre de cartes : " + nb);
 
         document.querySelector(".bouton2").addEventListener("click", supprimerPage, true);
+        
+        
+        var consigne2="Retourne " +o+" carte(s) orange(s) et "+n+" carte(s) noire(s) pour déterminer les matériaux que tu aura à ta disposition"
+        document.getElementById("consigne2").innerHTML = consigne2;
     }
 
     function clickCarte(evt) {
