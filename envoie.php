@@ -32,7 +32,7 @@ try {
     $mail->addAddress('paquet.amelie@hotmail.fr', 'Amelie');    // Add a recipient
     $mail->addAddress('mouttoualiah@gmail.com', 'Aliah');    // Add a recipient
     $mail->addAddress('hyunakim2807@gmail.com', 'Hyuna');    // Add a recipient
-    $mail->addAddress('yagmur.melisa@gmail.com', 'Melisa');    // Add a recipient
+//    $mail->addAddress('yagmur.melisa@gmail.com', 'Melisa');    // Add a recipient
 
     $nom = $_POST['nom'];
     $adress = $_POST['email'];
