@@ -1,6 +1,19 @@
 html {
     font-family: 'Roboto';
+    /*    cursor: url(de.png);*/
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+
 
 #jeu {
     width: 100%;
@@ -58,7 +71,7 @@ header #jouer {
     z-index: 2;
 }
 
-#p1{
+#p1 {
     display: -webkit-flex;
     position: relative;
     min-width: 80px;
@@ -67,7 +80,7 @@ header #jouer {
     margin: auto;
 }
 
-#p2{
+#p2 {
     display: -webkit-flex;
     flex-direction: row;
     position: relative;
@@ -439,12 +452,328 @@ header #jouer {
     overflow: hidden;
 }
 
-
-.accueil h2 {
-    overflow: hidden;
+.accueil .logo {
+    width: 60%;
     margin: auto;
-    font-size: 50px;
+    display: flex;
 }
+
+.lettre {
+    transform: scale(0.5);
+    margin: 0;
+}
+
+.o1 {
+    position: absolute;
+    top: 29%;
+    width: 10%;
+    left: 26%;
+    animation-duration: 2.7s;
+    animation-name: slideO1;
+}
+
+@keyframes slideO1 {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 29%;
+    }
+}
+
+.p11 {
+    position: absolute;
+    right: 57.1%;
+    width: 11.5%;
+    top: 34.3%;
+    animation-duration: 2s;
+    animation-name: slideP11;
+}
+
+@keyframes slideP11 {
+    from {
+        right: -60%;
+    }
+
+    to {
+        right: 57.1%;
+    }
+}
+
+
+.p12 {
+    position: absolute;
+    width: 4%;
+    top: 30.05%;
+    left: 32.5%;
+    animation-duration: 1s;
+    animation-name: slideP12;
+}
+
+@keyframes slideP12 {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 32.5%;
+    }
+}
+
+.p21 {
+    position: absolute;
+    right: 58.5%;
+    width: 6.5%;
+    top: 49.9%;
+    animation-duration: 2s;
+    animation-name: slideP21;
+}
+
+@keyframes slideP21 {
+    from {
+        right: -60%;
+    }
+
+    to {
+        right: 58.5%;
+    }
+}
+
+.p22 {
+    position: absolute;
+    width: 2%;
+    top: 47.9%;
+    left: 35.75%;
+    animation-duration: 1s;
+    animation-name: slideP22;
+}
+
+@keyframes slideP22 {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 35.75%;
+    }
+}
+
+.o2 {
+    position: absolute;
+    width: 11.7%;
+    left: 37%;
+    top: 29.7%;
+    animation-duration: 2.7s;
+    animation-name: slideO2;
+}
+
+@keyframes slideO2 {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 29.7%;
+    }
+}
+
+
+.r1 {
+    position: absolute;
+    width: 7%;
+    top: 44.5%;
+    left: 46.7%;
+    animation-duration: 2s;
+    animation-name: slideR1;
+}
+
+@keyframes slideR1 {
+    from {
+        top: 130%;
+    }
+
+    to {
+       top: 44.5%;
+    }
+}
+
+.r2 {
+    position: absolute;
+    top: 34.5%;
+    right: 45.3%;
+    /*    left: 43.7%;*/
+    width: 11%;
+    animation-duration: 2s;
+    animation-name: slideR2;
+}
+
+@keyframes slideR2 {
+    from {
+        right: -30%;
+    }
+
+    to {
+        right: 45.3%;
+    }
+}
+
+.r3 {
+    position: absolute;
+    top: 31.5%;
+    left: 45.1%;
+    width: 3%;
+    animation-duration: 1s;
+    animation-name: slideR3;
+}
+
+@keyframes slideR3 {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 45.1%;
+    }
+}
+
+.t1 {
+    position: absolute;
+    width: 4%;
+    top: 21.9%;
+    left: 51.6%;
+    animation-duration: 1s;
+    animation-name: slideT1;
+}
+
+@keyframes slideT1 {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 51.6%;
+    }
+}
+
+.t2 {
+    position: absolute;
+    width: 15%;
+    top: 27.4%;
+    left: 46.1%;
+    animation-duration: 1.5s;
+    animation-name: slideT2;
+}
+
+@keyframes slideT2 {
+    from {
+        top: -40%;
+    }
+
+    to {
+       top: 27.4;
+    }
+}
+
+.u {
+    position: absolute;
+    top: 20.5%;
+    left: 51.3%;
+/*    bottom: 27.3%;*/
+    width: 15%;
+    animation-duration: 2s;
+    animation-name: slideU;
+}
+
+@keyframes slideU {
+    from {
+        top: 130%;
+    }
+
+    to {
+        top: 20.5%;
+    }
+}
+
+.n1 {
+    position: absolute;
+    width: 8.3%;
+    top:  34.7%;
+    left: 60.6%;
+    animation-duration: 2s;
+    animation-name: slideN1;
+}
+
+@keyframes slideN1 {
+    from {
+        top: 130%;
+    }
+
+    to {
+        top:  34.7%;
+    }
+}
+
+.n2 {
+    position: absolute;
+    top: 34.544%;
+    width: 2.5%;
+    left: 61.7%;
+    animation-duration: 1s;
+    animation-name: slideN2;
+}
+
+@keyframes slideN2 {
+    from {
+        left: -30%;
+    }
+
+    to {
+       left: 61.7%;
+    }
+}
+
+.n3 {
+    position: absolute;
+    top: 34.544%;
+    width: 2.5%;
+    left: 65.25%;
+    animation-duration: 1s;
+    animation-name: slideN3;
+}
+
+@keyframes slideN3 {
+    from {
+        left: -30%;
+    }
+
+    to {
+       left: 65.25%;
+    }
+}
+
+.accueil .archi {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 24%;
+    left: 21.5%;
+    animation-duration: 4s;
+    animation-name: slideArchi;
+}
+
+@keyframes slideArchi {
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 .scroll {
     position: absolute;
@@ -736,15 +1065,15 @@ header #jouer {
     z-index: 0;
 }
 
-.etape1 p{
+.etape1 p {
     margin: 10px 0 5px 0;
 }
 
-.titre1{
+.titre1 {
     margin-bottom: 15px;
 }
 
-.etape1 p:first-of-type{
+.etape1 p:first-of-type {
     margin: 0 10px 0 40px;
 }
 
@@ -766,12 +1095,12 @@ header #jouer {
 /*****************************************   ETAPE 2 ********************************/
 .etape2 {
     height: 100%;
-    
+
 }
 
 .consignes {
     margin: 0 0 10px 40px;
-font-size: 20px;
+    font-size: 20px;
 }
 
 #jeuCartes {
@@ -982,7 +1311,7 @@ footer {
     color: black;
 }
 
-.page-template .rect{
+.page-template .rect {
     content: "";
     border: solid black 1px;
     border-radius: 8px;
@@ -993,18 +1322,18 @@ footer {
     left: 3%;
 }
 
-.page-template .rectResultat{
+.page-template .rectResultat {
     content: "";
     border: solid black 1px;
     border-radius: 8px;
     position: absolute;
-    top:7%;
+    top: 7%;
     height: 21%;
     width: 94%;
     left: 3%;
 }
 
-.page-template .body{
+.page-template .body {
     font-size: 0.8rem;
     position: absolute;
     left: 3%;
