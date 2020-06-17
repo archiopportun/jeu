@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto';
+    font-family: 'Roboto' !important;
     /*    cursor: url(de.png);*/
 }
 
@@ -35,7 +35,7 @@ html {
     border: solid black 1.5px;
     -webkit-border-radius: 8px;
     background: white;
-    font: 20px Roboto;
+    font: 20px Roboto !important;
     color: black;
     margin: 80px auto 0;
     display: flex;
@@ -96,6 +96,7 @@ body {
     position: relative;
     min-width: 80px;
     z-index: 2;
+    opacity: 1;
 }
 
 #p1 {
@@ -868,6 +869,10 @@ body {
     padding: 10px 20px;
 }
 
+.basTel {
+    display: none;
+}
+
 .lesEtapes {
     display: -webkit-flex;
     -webkit-flex-wrap: wrap;
@@ -1132,11 +1137,6 @@ body {
 
 }
 
-.consignes {
-    margin: 0 0 10px 40px;
-    font-size: 20px;
-}
-
 #jeuCartes {
     margin: 10px auto;
     width: 153vh;
@@ -1240,15 +1240,17 @@ footer p {
     margin: 0;
     width: 100vw;
     bottom: 0;
-    height: 30px;
+    height: 50px;
     font-size: 0.7rem;
 
     background-color: white;
 }
 
 footer {
+    height: 50px;
+    bottom: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 /***********************************************************************    CONTACT  *********************************************************/
@@ -1278,9 +1280,87 @@ footer {
     opacity: 0.7;
 }
 
-.portrait p {
+.portrait p:first-of-type {
     text-align: center;
-    font-weight: bolder;
+}
+
+.portrait p:not(:first-of-type) {
+    font-size: 14px;
+}
+
+
+/*****************************************************   A PROPOS  *********************************************/
+
+.aPropos {
+    margin: 170px 0;
+}
+
+
+/***************************************************    BIBLIOTHEQUE *****************************************/
+
+.biblio {
+    display: block;
+}
+
+.biblioTel {
+    display: none;
+}
+
+.bibliotheque {
+    margin: 130px 20px 20px;
+}
+
+.bibliotheque .formbox img {
+    width: calc(100vw - 40px);
+}
+
+.bibliotheque h2 {
+    margin: 0 0 0 45px;
+}
+
+.exemple {
+    margin-bottom: 30px;
+}
+
+#popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+#popup:target {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.popup-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 80%;
+}
+
+.popup-card-content img {
+    margin: 5vh 10vw;
+    height: 90vh;
+}
+
+.close img {
+    z-index: 18;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
 }
 
 
@@ -1306,17 +1386,7 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+/**********************************************   PDF   ***********************************************/
 
 
 .page-template {
@@ -1388,7 +1458,7 @@ footer {
 
     .accueil .logoResponsive {
         display: flex;
-        margin:35vh 10% auto;
+        margin: 35vh 10% auto;
         width: 80vw;
     }
 
@@ -1402,17 +1472,707 @@ footer {
         left: 42%;
     }
 
+    .entete {
+        min-height: 180px;
+    }
+
+    .archiOppo {
+        font-size: 35px;
+        margin: auto 60px;
+    }
+
+
+
+    #menuBurger {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin: 75px 50px;
+        z-index: 2;
+        -webkit-user-select: none;
+        user-select: none;
+        position: fixed;
+        top: 0;
+    }
+
+    #menuBurger input {
+        width: 45px;
+        height: 45px;
+
+    }
+
+    #menuBurger span {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .concept {
+        margin: 150px 0;
+    }
+
+    .presentationConcept {
+        margin: 7%;
+        font-size: 2.5rem;
+    }
+
+    .methodo {
+        padding: 25px;
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        bottom: 0;
+        font-size: 1.5rem;
+    }
+
+
+    .haut {
+        flex-wrap: wrap;
+        margin: 90px 0 20px;
+    }
+
+    .haut div {
+        border: solid black 1.5px;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+        padding: 0 20px;
+    }
+
+    .haut div:first-of-type {
+        width: 100vw;
+        margin: 0 0 40px 0;
+    }
+
+    .haut div:nth-of-type(2) {
+        width: 100vw;
+        margin-right: 0px;
+    }
+
+    .bas {
+        flex-wrap: wrap;
+    }
+
+
+    .bas {
+        display: none;
+    }
+
+    .deBut {
+        width: 100px;
+        margin: 0;
+        right: 0;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .cEtape2 {
+        width: 20%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .cEtape3 {
+        width: 40%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .cEtape4 {
+        margin-top: 10px;
+        width: 40%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .cEtape5 {
+        width: 36%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .cEtape6 {
+        width: 40%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    .lesEtapes p {
+        margin: 0px 0 10px;
+    }
+
+    .lesEtapes h3 {
+        margin: 0 0 10px;
+    }
+
+    .un h3 {
+        margin-top: 20px;
+    }
+
+
+
+    .basTel {
+        display: block;
+    }
+
+
+
+
+    .slider {
+        margin: 40px auto;
+        width: calc(100vw - 60px);
+        border: solid black 1.5px;
+        border-radius: 25px;
+
+        overflow: hidden;
+    }
+
+    .slide_viewer {
+        height: 70vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide_group {
+        height:auto;
+        position: relative;
+        width: 80%;
+        margin: auto;
+    }
+
+    .slide {
+        height: 100%;
+        margin: 40px auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .slide:first-of-type h3 {
+        font-size: 46px;
+        padding: 280px 0 0;
+    }
+
+    .slide:first-of-type p {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .slide:first-of-type img {
+        width: 300px;
+        position: absolute;
+        right: 60px;
+        top: 20px;
+    }
+
+    .slide:nth-of-type(2) {
+        text-align: right;
+    }
+
+    .slide:nth-of-type(2) h3 {
+        font-size: 46px;
+        padding: 170px 0 0;
+    }
+
+    .slide:nth-of-type(2) p {
+        font-size: 40px;
+    }
+
+    .slide:nth-of-type(2) img {
+        width: 350px;
+        position: absolute;
+        left: 60px;
+    }
+
+    .slide:nth-of-type(3) {
+        text-align: right;
+    }
+
+
+    .slide:nth-of-type(3) h3 {
+        font-size: 46px;
+        padding: 230px 0 0;
+    }
+
+    .slide:nth-of-type(3) p {
+        font-size: 40px;
+    }
+
+    .slide:nth-of-type(3) img {
+        width: 240px;
+        position: absolute;
+        left: 100px;
+    }
+
+
+
+    .slide:nth-of-type(4) h3 {
+        font-size: 46px;
+        padding: 280px 0 0;
+    }
+
+    .slide:nth-of-type(4) p {
+        font-size: 40px;
+    }
+
+    .slide:nth-of-type(4) img {
+        width: 240px;
+        position: absolute;
+        right: 120px;
+    }
+
+
+    .slide:nth-of-type(5) h3 {
+        font-size: 46px;
+        padding: 280px 0 0;
+    }
+
+    .slide:nth-of-type(5) p {
+        font-size: 40px;
+    }
+
+    .slide:nth-of-type(5) img {
+        width: 240px;
+        position: absolute;
+        right: 120px;
+    }
+
+    .slide:nth-of-type(6) h3 {
+        font-size: 46px;
+        padding: 280px 0 0;
+    }
+
+    .slide:nth-of-type(6) p {
+        font-size: 40px;
+    }
+
+    .slide:nth-of-type(6) img {
+        width: 240px;
+        position: absolute;
+        right: 120px;
+    }
+
+
+    .directional_nav {
+        margin: 0 auto;
+        max-width: 940px;
+        position: relative;
+        top: -36vw;
+    }
+
+    .previous_btn {
+        bottom: 0;
+        left: 20px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+    }
+
+    .next_btn {
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+
+    .previous_btn,
+    .next_btn {
+        height: 100px;
+        opacity: 1;
+        -webkit-transition: opacity 0.4s ease-in-out;
+        -moz-transition: opacity 0.4s ease-in-out;
+        -ms-transition: opacity 0.4s ease-in-out;
+        -o-transition: opacity 0.4s ease-in-out;
+        transition: opacity 0.4s ease-in-out;
+        width: 100px;
+    }
+
+    .jouer {
+        text-decoration: none;
+        justify-content: center;
+        border: none;
+        padding: 25px;
+        border-radius: 8px;
+        border: solid black 1.5px;
+        -webkit-border-radius: 8px;
+        background: white;
+        font: 45px Roboto;
+        color: black;
+        width: 130px;
+        margin: 60px auto;
+        display: flex;
+    }
+    
+    
+
+
+
+
+    /***********************************************  JEU TEL   ***********************************************/
+
+    #resultat {
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    /*****************************************   ETAPE 1 *****************************/
+    #des img {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    #des {
+        width: auto;
+        height: auto;
+        margin: auto;
+        padding-top: 2%;
+    }
+
+    .bouton1 {
+        margin: 0 auto auto;
+        padding: 25px;
+        font-size: 3rem;
+    }
+
+    .bouton2 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+    }
+
+    .bouton3 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 20px auto 50px;
+    }
+
+    .bouton4 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 20px auto auto;
+    }
+
+    .bouton5 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 20px auto auto;
+    }
+
+    .bouton6 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 20px auto auto;
+    }
+
+    .bouton7 {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 50px auto 70px;
+    }
+
+
+    .etape1 p:nth-of-type(2)::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .titre1 {
+        margin: 70px 0 15px;
+        font-size: 2.5rem;
+    }
+
+    .etape1 p:first-of-type {
+        margin: 20px 10px 50px 0px;
+    }
+
+    .etape1 p:nth-of-type(3)::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .etape1 p {
+        font-size: 1em;
+    }
+
+    .etape1 h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+    }
+
+
+    /*****************************************   ETAPE 2 ********************************/
+    .etape2 h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+
+    }
+
+    .consigne2 {
+        margin: 0 0 10px 40px;
+        font-size: 35px;
+    }
+
+    .consignes {
+        margin: 0 0 10px 40px;
+        font-size: 1.8em;
+    }
+
+
+
+    #jeuCartes {
+        width: auto;
+        margin: 20px 0;
+    }
+
+    /*Retournement des cartes : principe du flip  */
+    .flip {
+        width: 8vh;
+
+    }
+
+    .flip img {
+        width: 8vh;
+    }
+
+    /********************************    ETAPE 3 ***********************************/
+
+    #programme {
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 10vh auto;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    #page4 h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+    }
+
+    /***********************************    ETAPE 4 ***************************/
+
+    #oppoArchi {
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 5vh 0 auto;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+    }
+
+    #page5 h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+    }
+
+    /***********************************    ETAPE 5 ***************************/
+
+    #site {
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 10vh 0 auto;
+    }
+
+
+    #page6 h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+    }
+
+
+    /********************************   BILAN   ****************************************/
+
+    #bilan {
+        height: 0;
+        overflow: hidden;
+    }
+
+    #bilan h2 {
+        margin: 70px 0 15px;
+        font-size: 40px;
+    }
+
+    #bilan:target {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        margin: 0px 30px 20px;
+        padding: 130px 0 30px;
+        min-height: calc(100vh - 200px);
+        height: auto;
+    }
+
+    #resultatBilan {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        min-width: 80px;
+    }
+
+    #bilan1 {
+        margin: 7px 1vw;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #bilan2 {
+        margin: 7px 1vw;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #bilan3 {
+        margin: 7px 1vw;
+    }
+
+    #bilan4 {
+        margin: 7px 1vw;
+    }
+
+    #bilan5 {
+        margin: 7px 1vw;
+    }
+
+    .bilanCartes1 {
+        flex-direction: row;
+        width: 12vh;
+        margin: 0.3vw;
+    }
+
+    .bilanCartes2 {
+        width: 12vh;
+        margin: 0.3vw;
+    }
+
+    .bilanCartes3 {
+        width: 12vh;
+        margin: 0.3vw;
+    }
+
+    .bilanCartes4 {
+        width: 12vh;
+        margin: 0.3vw;
+    }
+
+    .bilanCartes5 {
+        width: 12vh;
+        margin: 0.3vw;
+    }
+
+    .ligne1 {
+        -webkit-justify-content: center;
+        justify-content: center;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+
+    .ligne2 {
+        -webkit-justify-content: center;
+        justify-content: center;
+        display: -webkit-flex;
+    }
+
+
+
+
+    /*******************************************   CONTACT   ***************************************/
+
+    #contact {
+        padding: 200px 30px 0 30px;
+
+    }
+
+    .lesPortraits {
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+
+    }
+
+    .portrait {
+        width: 100vw;
+        margin: 35px;
+        display: flex;
+    }
+
+
+    .portrait img {
+        height: auto;
+        width: 35vw;
+        opacity: 0.7;
+        margin: auto 30px;
+    }
+
+    .portrait p:first-of-type {
+        text-align: center;
+        font-size: 29px;
+    }
+
+    .portrait p:not(:first-of-type) {
+        font-size: 27px;
+    }
+
+    /***********************************   A PROPOS   *****************************************/
+
+    .aPropos {
+        margin: 250px auto;
+    }
+
+    /***************************************************    BIBLIOTHEQUE *****************************************/
+
+    .biblio {
+        display: none;
+    }
+
+    .biblioTel {
+        display: block;
+    }
+
+    .bibliotheque {
+        margin: 220px 20px 20px;
+    }
+
+    .biblioTel img {
+        width: calc(100vw - 40px);
+        margin-bottom: 30px;
+    }
+
+    .bibliotheque h2 {
+        margin: 0 0 0 25px;
+        font-size: 14px;
+    }
+
+
 }
 
 
-@media screen and (min-device-width: 576px) and (max-width: 1280px)  {
+@media screen and (min-device-width: 576px) and (max-width: 1280px) {
     .accueil .logo {
         display: none;
     }
 
     .accueil .logoResponsive {
         display: flex;
-        margin:25vh auto auto;
+        margin: 25vh auto auto;
         width: 60vw;
     }
 

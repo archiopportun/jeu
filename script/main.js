@@ -32,6 +32,94 @@
     var nb = 0;
 
     function initialiser(evt) {
+        $('.slider').each(function () {
+            var $this = $(this);
+            var $group = $this.find('.slide_group');
+            var $slides = $this.find('.slide');
+            var bulletArray = [];
+            var currentIndex = 0;
+            var timeout;
+
+            function move(newIndex) {
+                var animateLeft, slideLeft;
+
+                advance();
+
+                if ($group.is(':animated') || currentIndex === newIndex) {
+                    return;
+                }
+
+                bulletArray[currentIndex].removeClass('active');
+                bulletArray[newIndex].addClass('active');
+
+                if (newIndex > currentIndex) {
+                    slideLeft = '100%';
+                    animateLeft = '-100%';
+                } else {
+                    slideLeft = '-100%';
+                    animateLeft = '100%';
+                }
+
+                $slides.eq(newIndex).css({
+                    display: 'block',
+                    left: slideLeft
+                });
+                $group.animate({
+                    left: animateLeft
+                }, function () {
+                    $slides.eq(currentIndex).css({
+                        display: 'none'
+                    });
+                    $slides.eq(newIndex).css({
+                        left: 0
+                    });
+                    $group.css({
+                        left: 0
+                    });
+                    currentIndex = newIndex;
+                });
+            }
+
+            function advance() {
+                clearTimeout(timeout);
+
+            }
+
+            $('.next_btn').on('click', function () {
+                if (currentIndex < ($slides.length - 1)) {
+                    move(currentIndex + 1);
+                } else {
+                    move(0);
+                }
+            });
+
+            $('.previous_btn').on('click', function () {
+                if (currentIndex !== 0) {
+                    move(currentIndex - 1);
+                } else {
+                    move(5);
+                }
+            });
+
+            $.each($slides, function (index) {
+                var $button = $('<a class="slide_btn">&bull;</a>');
+
+                if (index === currentIndex) {
+                    $button.addClass('active');
+                }
+                $button.on('click', function () {
+                    move(index);
+                }).appendTo('.slide_buttons');
+                bulletArray.push($button);
+            });
+
+            advance();
+        });
+
+
+
+
+
         var lesImgO = document.getElementById("jeuCartes").getElementsByClassName("flip");
         for (uneImg of lesImgO) {
             uneImg.addEventListener("click", clickCarte, true);
@@ -68,8 +156,8 @@
         var button1 = document.querySelector(".bouton1");
 
         button1.addEventListener('click', etape1, true);
-        
-        
+
+
     }
 
 
@@ -146,10 +234,12 @@
         console.log("nombre de cartes : " + nb);
 
         document.querySelector(".bouton2").addEventListener("click", supprimerPage, true);
-        
-        
-        var consigne2="Retourne " +o+" carte(s) orange(s) et "+n+" carte(s) noire(s) pour déterminer les matériaux que tu aura à ta disposition"
-        document.getElementById("consigne2").innerHTML = consigne2;
+
+
+        var consigne2 = "Retourne " + o + " carte(s) orange(s) et " + n + " carte(s) noire(s) pour déterminer les matériaux que tu aura à ta disposition"
+        var texte2 = document.getElementById("consigne2");
+        texte2.innerHTML = consigne2;
+        texte2.style.fontSize = "calc(48px - 28px)";
     }
 
     function clickCarte(evt) {
