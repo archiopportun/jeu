@@ -1308,21 +1308,23 @@ footer {
 
 .bibliotheque {
     margin: 130px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .bibliotheque .formbox img {
-    width: calc(100vw - 40px);
+    width: calc(50vw - 40px);
 }
 
 .bibliotheque h2 {
-    margin: 0 0 0 45px;
+    margin: 0 0 0 22px;
 }
 
 .exemple {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
-#popup {
+.popup {
     position: fixed;
     left: 0;
     top: 0;
@@ -1334,7 +1336,7 @@ footer {
     transition: all 0.4s ease;
 }
 
-#popup:target {
+#popup1:target, #popup2:target, #popup3:target, #popup4:target, #popup5:target, #popup6:target, #popup7:target, #popup8:target, #popup9:target, #popup10:target, #popup11:target, #popup12:target, #popup13:target, #popup14:target, #popup15:target, #popup16:target, #popup17:target, #popup18:target, #popup19:target, #popup20:target, #popup21:target, #popup22:target, #popup23:target {
     opacity: 1;
     visibility: visible;
     z-index: 10;
@@ -1361,6 +1363,10 @@ footer {
     margin: 0;
     width: 50px;
     height: 50px;
+}
+
+.close:target .popup{
+    visibility: hidden;
 }
 
 
