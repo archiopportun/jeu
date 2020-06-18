@@ -29,10 +29,11 @@ try {
     //Recipients
     $mail->setFrom('paquetcoraline@gmail.com', 'Archi Opportun');
     $mail->addAddress('paquetcoraline@gmail.com', 'Coraline');    // Add a recipient
-    $mail->addAddress('paquet.amelie@hotmail.fr', 'Amelie');    // Add a recipient
-    $mail->addAddress('mouttoualiah@gmail.com', 'Aliah');    // Add a recipient
-    $mail->addAddress('hyunakim2807@gmail.com', 'Hyuna');    // Add a recipient
+//    $mail->addAddress('paquet.amelie@hotmail.fr', 'Amelie');    // Add a recipient
+//    $mail->addAddress('mouttoualiah@gmail.com', 'Aliah');    // Add a recipient
+//    $mail->addAddress('hyunakim2807@gmail.com', 'Hyuna');    // Add a recipient
 //    $mail->addAddress('yagmur.melisa@gmail.com', 'Melisa');    // Add a recipient
+//    $mail->addAddress('lea.bilbot@paris-valdeseine.archi.fr', 'Léa');    // Add a recipient
 
     $nom = $_POST['nom'];
     $adress = $_POST['email'];
