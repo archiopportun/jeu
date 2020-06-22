@@ -1569,20 +1569,14 @@ footer {
     }
 
     footer p {
-        display: none;
-/*
         bottom: 0;
         font-size: 1.5rem;
         height: 50px;
-*/
     }
 
     footer {
-/*
         height: 50px;
         position: fixed;
-*/
-        display: none;
     }
 
 
