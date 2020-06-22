@@ -252,7 +252,7 @@
         document.querySelector(".bouton2").addEventListener("click", supprimerPage, true);
 
 
-        var consigne2 = "Retourne " + o + " carte(s) orange(s) et " + n + " carte(s) noire(s) pour déterminer les matériaux que tu aura à ta disposition"
+        var consigne2 = "Retourne " + o + " carte(s) orange(s) et " + n + " carte(s) noire(s) pour déterminer les matériaux que tu auras à ta disposition"
         var texte2 = document.getElementById("consigne2");
         texte2.innerHTML = consigne2;
     }
