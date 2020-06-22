@@ -11,6 +11,7 @@ html {
 ::-webkit-scrollbar-thumb {
     background-color: gainsboro;
     border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
 .concept {
@@ -26,6 +27,7 @@ html {
 .methodo {
     text-decoration: none;
     justify-content: center;
+    -webkit-justify-content :center;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -35,7 +37,7 @@ html {
     font: 20px Roboto;
     color: black;
     margin: 80px auto ;
-    display: flex;
+    display:  -webkit-flex;
     width: 150px;
 }
 
@@ -68,6 +70,7 @@ body {
 .jouer {
     text-decoration: none;
     justify-content: center;
+    -webkit-justify-content : center;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -78,7 +81,7 @@ body {
     color: black;
     width: 5%;
     margin: 30px auto;
-    display: flex;
+    display: -webkit-flex;
 }
 
 .archiOppo {
@@ -95,6 +98,7 @@ body {
     min-width: 80px;
     z-index: 2;
     opacity: 1;
+    -webkit-opacity: 1;
 }
 
 #p1 {
@@ -109,6 +113,7 @@ body {
 #p2 {
     display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     position: relative;
     min-width: 80px;
     z-index: 2;
@@ -486,10 +491,11 @@ body {
 .accueil .logo {
     width: 60%;
     margin: auto;
-    display: flex;
+    display:  -webkit-flex;
 }
 
 .lettre {
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
     margin: 0;
 }
@@ -499,7 +505,9 @@ body {
     top: 29%;
     width: 10%;
     left: 26%;
+    -webkit-animation-duration: 2.7s;
     animation-duration: 2.7s;
+    -webkit-animation-name: slideO1;
     animation-name: slideO1;
 }
 
@@ -518,7 +526,9 @@ body {
     right: 57.1%;
     width: 11.5%;
     top: 34.3%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideP11;
     animation-name: slideP11;
 }
 
@@ -538,7 +548,9 @@ body {
     width: 4%;
     top: 30.05%;
     left: 32.5%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideP12;
     animation-name: slideP12;
 }
 
@@ -557,7 +569,9 @@ body {
     right: 58.5%;
     width: 6.5%;
     top: 49.9%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideP21;
     animation-name: slideP21;
 }
 
@@ -576,7 +590,9 @@ body {
     width: 2%;
     top: 47.9%;
     left: 35.75%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideP22;
     animation-name: slideP22;
 }
 
@@ -595,7 +611,9 @@ body {
     width: 11.7%;
     left: 37%;
     top: 29.7%;
+    -webkit-animation-duration: 2.7s;
     animation-duration: 2.7s;
+    -webkit-animation-name: slideO2;
     animation-name: slideO2;
 }
 
@@ -615,7 +633,9 @@ body {
     width: 7%;
     top: 44.5%;
     left: 46.7%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideR1;
     animation-name: slideR1;
 }
 
@@ -635,7 +655,9 @@ body {
     right: 45.3%;
     /*    left: 43.7%;*/
     width: 11%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideR2;
     animation-name: slideR2;
 }
 
@@ -654,7 +676,9 @@ body {
     top: 31.5%;
     left: 45.1%;
     width: 3%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideR3;
     animation-name: slideR3;
 }
 
@@ -673,7 +697,9 @@ body {
     width: 4%;
     top: 21.9%;
     left: 51.6%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideT1;
     animation-name: slideT1;
 }
 
@@ -692,7 +718,9 @@ body {
     width: 15%;
     top: 27.4%;
     left: 46.1%;
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-name: slideT2;
     animation-name: slideT2;
 }
 
@@ -712,7 +740,9 @@ body {
     left: 51.3%;
     /*    bottom: 27.3%;*/
     width: 15%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideU;
     animation-name: slideU;
 }
 
@@ -731,7 +761,9 @@ body {
     width: 8.3%;
     top: 34.7%;
     left: 60.6%;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-name: slideN1;
     animation-name: slideN1;
 }
 
@@ -750,7 +782,9 @@ body {
     top: 34.544%;
     width: 2.5%;
     left: 61.7%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideN2;
     animation-name: slideN2;
 }
 
@@ -769,7 +803,9 @@ body {
     top: 34.544%;
     width: 2.5%;
     left: 65.25%;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-name: slideN3;
     animation-name: slideN3;
 }
 
@@ -789,21 +825,26 @@ body {
     position: absolute;
     top: 24%;
     left: 21.5%;
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
+    -webkit-animation-name: slideArchi;
     animation-name: slideArchi;
 }
 
 @keyframes slideArchi {
     0% {
         opacity: 0;
+        -webkit-opacity: 0;
     }
 
     60% {
         opacity: 0;
+        -webkit-opacity: 0;
     }
 
     100% {
         opacity: 1;
+        -webkit-opacity: 1;
     }
 }
 
@@ -1276,6 +1317,7 @@ footer {
 .portrait img {
     width: 100%;
     opacity: 0.7;
+    -webkit-opacity: 0.7;
 }
 
 .portrait p:first-of-type {
@@ -1289,6 +1331,7 @@ footer {
 .contact {
     text-decoration: none;
     justify-content: center;
+    -webkit-justify-content : center;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -1298,7 +1341,7 @@ footer {
     font: 20px Roboto;
     color: black;
     margin: 0 auto 0;
-    display: flex;
+    display:  -webkit-flex;
     width: 150px;
 }
 
@@ -1322,7 +1365,8 @@ footer {
 
 .bibliotheque {
     margin: 130px 20px 20px;
-    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -1346,8 +1390,10 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
+    -webkit-opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
 }
 
 #popup1:target,
@@ -1374,14 +1420,16 @@ footer {
 #popup22:target,
 #popup23:target {
     opacity: 1;
+    -webkit-opacity: 1;
     visibility: visible;
     z-index: 10;
 }
 
 .popup-card {
     position: relative;
-    display: flex;
+    display:  -webkit-flex;
     justify-content: center;
+    -webkit-justify-content : center;
     width: 100vw;
     height: 80%;
 }
@@ -1462,6 +1510,7 @@ footer {
     content: "";
     border: solid black 1px;
     border-radius: 8px;
+    -webkit-border-radius: 8px;
     position: absolute;
     bottom: 4%;
     height: 61%;
@@ -1473,6 +1522,7 @@ footer {
     content: "";
     border: solid black 1px;
     border-radius: 8px;
+    -webkit-border-radius: 8px;
     position: absolute;
     top: 7%;
     height: 21%;
@@ -1504,15 +1554,16 @@ footer {
     }
 
     .accueil .logoResponsive {
-        display: flex;
+        display: -webkit-flex;
         margin: 35vh 10% auto;
         width: 80vw;
     }
 
     .accueil {
         height: 100vh;
-        display: flex;
+        display:  -webkit-flex;
         flex-direction: column;
+        -webkit-flex-direction: column;
     }
 
     .scroll {
@@ -1581,6 +1632,7 @@ footer {
 
 
     .haut {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
         margin: 90px 0 20px;
     }
@@ -1603,6 +1655,7 @@ footer {
     }
 
     .bas {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -1676,7 +1729,7 @@ footer {
         width: calc(100vw - 60px);
         border: solid black 1.5px;
         border-radius: 25px;
-
+-webkit-border-radius: 25px;
         overflow: hidden;
     }
 
@@ -1697,9 +1750,11 @@ footer {
         height: 100%;
         margin: 40px auto;
         width: 80%;
-        display: flex;
+        display:  -webkit-flex;
         flex-direction: column;
+        -webkit-flex-direction: column;
         justify-content: center;
+        -webkit-justify-content: center;
     }
 
 
@@ -1835,17 +1890,19 @@ footer {
     .next_btn {
         height: 100px;
         opacity: 1;
-        -webkit-transition: opacity 0.4s ease-in-out;
-        -moz-transition: opacity 0.4s ease-in-out;
-        -ms-transition: opacity 0.4s ease-in-out;
-        -o-transition: opacity 0.4s ease-in-out;
-        transition: opacity 0.4s ease-in-out;
+        -webkit-opacity: 1;
+        -webkit-transition: -webkit-opacity 0.4s ease-in-out;
+        -moz-transition: -webkit-opacity 0.4s ease-in-out;
+        -ms-transition: -webkit-opacity 0.4s ease-in-out;
+        -o-transition: -webkit-opacity 0.4s ease-in-out;
+        transition: -webkit-opacity 0.4s ease-in-out;
         width: 100px;
     }
 
     .jouer {
         text-decoration: none;
         justify-content: center;
+        -webkit-justify-content : center;
         border: none;
         padding: 25px;
         border-radius: 8px;
@@ -1856,7 +1913,7 @@ footer {
         color: black;
         width: 130px;
         margin: 60px auto;
-        display: flex;
+        display:  -webkit-flex;
     }
 
 
@@ -1868,6 +1925,7 @@ footer {
 
     #resultat {
         opacity: 0;
+        -webkit-opacity: 0;
         height: 0;
         width: 0;
     }
@@ -2085,14 +2143,18 @@ footer {
     #bilan1 {
         margin: 7px 1vw;
         justify-content: center;
-        display: flex;
+        -webkit-justify-content :center;
+        display:  -webkit-flex;
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
     #bilan2 {
         margin: 7px 1vw;
         justify-content: center;
-        display: flex;
+        -webkit-justify-content :center;
+        display:  -webkit-flex;
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -2110,6 +2172,7 @@ footer {
 
     .bilanCartes1 {
         flex-direction: row;
+        -webkit-flex-direction: row;
         width: 12vh;
         margin: 0.3vw;
     }
@@ -2139,6 +2202,7 @@ footer {
         justify-content: center;
         display: -webkit-flex;
         flex-direction: column;
+        -webkit-flex-direction: column;
     }
 
     .ligne2 {
@@ -2169,7 +2233,7 @@ footer {
     .portrait {
         width: 100vw;
         margin: 35px;
-        display: flex;
+        display:  -webkit-flex;
     }
 
 
@@ -2177,6 +2241,7 @@ footer {
         height: auto;
         width: 35vw;
         opacity: 0.7;
+        -webkit-opacity: 0.7;
         margin: auto 30px;
     }
 
@@ -2237,15 +2302,16 @@ footer {
     }
 
     .accueil .logoResponsive {
-        display: flex;
+        display: -webkit-flex;
         margin: 25vh auto auto;
         width: 60vw;
     }
 
     .accueil {
         height: 100vh;
-        display: flex;
+        display:  -webkit-flex;
         flex-direction: column;
+        -webkit-flex-direction: column;
     }
 
 
