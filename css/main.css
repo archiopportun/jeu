@@ -1286,6 +1286,22 @@ footer {
     font-size: 14px;
 }
 
+.contact {
+    text-decoration: none;
+    justify-content: center;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    border: solid black 1.5px;
+    -webkit-border-radius: 8px;
+    background: white;
+    font: 20px Roboto !important;
+    color: black;
+    margin: 0 auto 0;
+    display: flex;
+    width: 150px;
+}
+
 
 /*****************************************************   A PROPOS  *********************************************/
 
