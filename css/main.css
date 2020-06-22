@@ -1340,7 +1340,7 @@ footer {
     background: white;
     font: 20px Roboto;
     color: black;
-    margin: 0 auto 0;
+    margin: 0 auto 50px;
     display:  -webkit-flex;
     width: 150px;
 }
