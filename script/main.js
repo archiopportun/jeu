@@ -32,6 +32,29 @@
     var nb = 0;
 
     function initialiser(evt) {
+        //         if (document.body.className == "accueil") {
+        //            var play = document.getElementById("play");
+        //            play.addEventListener("click", lancerWebDoc);
+        //        } else if (document.body.className == "partie1") {
+        //        
+
+        function envoi() {
+            // par défaut, pas d'envoi
+            document.formu.action = "";
+            // recherche de @ dans l'adresse
+            var address = window.document.formu.adr.value;
+            var pos = address.indexOf("@");
+            if (address == "") {
+                alert("Vous devez donner une adresse e-mail.");
+            } else {
+                if (pos == -1 || pos == 0 || pos == address.length - 1) {
+                    alert("Une adresse e-mail a le format nom@domaine");
+                } else // tout va bien, on envoie le formulaire
+                    document.formu.action = 'mailto:coraline211285@gmail.com?subject="Cours JavaScript"';
+            }
+        }
+
+
         $('.slider').each(function () {
             var $this = $(this);
             var $group = $this.find('.slide_group');
@@ -239,7 +262,6 @@
         var consigne2 = "Retourne " + o + " carte(s) orange(s) et " + n + " carte(s) noire(s) pour déterminer les matériaux que tu aura à ta disposition"
         var texte2 = document.getElementById("consigne2");
         texte2.innerHTML = consigne2;
-        texte2.style.fontSize = "calc(48px - 28px)";
     }
 
     function clickCarte(evt) {

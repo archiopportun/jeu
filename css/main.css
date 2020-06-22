@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto' !important;
+    font-family: 'Roboto';
     /*    cursor: url(de.png);*/
 }
 
@@ -32,7 +32,7 @@ html {
     border: solid black 1.5px;
     -webkit-border-radius: 8px;
     background: white;
-    font: 20px Roboto !important;
+    font: 20px Roboto;
     color: black;
     margin: 80px auto 0;
     display: flex;
@@ -1242,13 +1242,14 @@ footer p {
     font-size: 0.7rem;
 
     background-color: white;
+    z-index: 99;
 }
 
 footer {
     height: 20px;
     bottom: 0;
     background-color: white;
-    z-index: 2;
+    z-index: 20;
 }
 
 /***********************************************************************    CONTACT  *********************************************************/
@@ -1295,7 +1296,7 @@ footer {
     border: solid black 1.5px;
     -webkit-border-radius: 8px;
     background: white;
-    font: 20px Roboto !important;
+    font: 20px Roboto;
     color: black;
     margin: 0 auto 0;
     display: flex;
@@ -1350,7 +1351,29 @@ footer {
     transition: all 0.4s ease;
 }
 
-#popup1:target, #popup2:target, #popup3:target, #popup4:target, #popup5:target, #popup6:target, #popup7:target, #popup8:target, #popup9:target, #popup10:target, #popup11:target, #popup12:target, #popup13:target, #popup14:target, #popup15:target, #popup16:target, #popup17:target, #popup18:target, #popup19:target, #popup20:target, #popup21:target, #popup22:target, #popup23:target {
+#popup1:target,
+#popup2:target,
+#popup3:target,
+#popup4:target,
+#popup5:target,
+#popup6:target,
+#popup7:target,
+#popup8:target,
+#popup9:target,
+#popup10:target,
+#popup11:target,
+#popup12:target,
+#popup13:target,
+#popup14:target,
+#popup15:target,
+#popup16:target,
+#popup17:target,
+#popup18:target,
+#popup19:target,
+#popup20:target,
+#popup21:target,
+#popup22:target,
+#popup23:target {
     opacity: 1;
     visibility: visible;
     z-index: 10;
@@ -1379,7 +1402,7 @@ footer {
     height: 50px;
 }
 
-.close:target .popup{
+.close:target .popup {
     visibility: hidden;
 }
 
@@ -1472,6 +1495,11 @@ footer {
 
 
 @media screen and (max-device-width: 576px) {
+
+    #menu li a {
+        font-size: 90px;
+    }
+
     .accueil .logo {
         display: none;
     }
@@ -1527,22 +1555,28 @@ footer {
     }
 
     .concept {
-        margin: 150px 0;
+        margin: 100px 0;
     }
 
     .presentationConcept {
         margin: 7%;
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
 
     .methodo {
         padding: 25px;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        width: 300px;
     }
 
     footer p {
         bottom: 0;
         font-size: 1.5rem;
+        height: 50px;
+    }
+
+    footer {
+        height: 50px;
     }
 
 
@@ -1653,7 +1687,7 @@ footer {
     }
 
     .slide_group {
-        height:auto;
+        height: auto;
         position: relative;
         width: 80%;
         margin: auto;
@@ -1824,8 +1858,8 @@ footer {
         margin: 60px auto;
         display: flex;
     }
-    
-    
+
+
 
 
 
@@ -1919,12 +1953,12 @@ footer {
     }
 
     .etape1 p {
-        font-size: 1em;
+        font-size: 2.5em;
     }
 
     .etape1 h2 {
         margin: 70px 0 15px;
-        font-size: 40px;
+        font-size: 50px;
     }
 
 
@@ -1937,7 +1971,7 @@ footer {
 
     .consigne2 {
         margin: 0 0 10px 40px;
-        font-size: 35px;
+        font-size: 1.4em;
     }
 
     .consignes {
@@ -1945,6 +1979,10 @@ footer {
         font-size: 1.8em;
     }
 
+    .consigne3 {
+        margin: 0 0 10px 40px;
+        font-size: 2.02em;
+    }
 
 
     #jeuCartes {
@@ -2151,10 +2189,18 @@ footer {
         font-size: 27px;
     }
 
+    .contact {
+        padding: 25px;
+        font-size: 3rem;
+        width: 400px;
+        margin: 50px auto 100px;
+    }
+
     /***********************************   A PROPOS   *****************************************/
 
     .aPropos {
-        margin: 250px auto;
+        margin: 20px auto;
+        font-size: 0.5rem;
     }
 
     /***************************************************    BIBLIOTHEQUE *****************************************/
