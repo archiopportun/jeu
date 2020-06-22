@@ -1589,7 +1589,7 @@ footer {
         border: solid black 1.5px;
         -webkit-border-radius: 20px;
         border-radius: 20px;
-        padding: 0 20px;
+        padding: 20px 50px;
     }
 
     .haut div:first-of-type {
