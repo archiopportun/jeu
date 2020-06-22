@@ -22,8 +22,8 @@ html {
 
 .presentationConcept {
     text-align: center;
-    margin: 0 20%;
-    font-size: 1.2rem;
+    margin: 20px 20%;
+    font-size: 1rem;
 }
 
 .methodo {
@@ -1240,14 +1240,14 @@ footer p {
     margin: 0;
     width: 100vw;
     bottom: 0;
-    height: 50px;
+    height: 25px;
     font-size: 0.7rem;
 
     background-color: white;
 }
 
 footer {
-    height: 50px;
+    height: 20px;
     bottom: 0;
     background-color: white;
     z-index: 2;
