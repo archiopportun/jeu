@@ -1242,14 +1242,13 @@ footer p {
     font-size: 0.7rem;
 
     background-color: white;
-    z-index: 99;
 }
 
 footer {
     height: 20px;
     bottom: 0;
     background-color: white;
-    z-index: 20;
+    z-index: 2;
 }
 
 /***********************************************************************    CONTACT  *********************************************************/
@@ -1570,13 +1569,20 @@ footer {
     }
 
     footer p {
+        display: none;
+/*
         bottom: 0;
         font-size: 1.5rem;
         height: 50px;
+*/
     }
 
     footer {
+/*
         height: 50px;
+        position: fixed;
+*/
+        display: none;
     }
 
 
