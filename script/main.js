@@ -32,157 +32,150 @@
     var nb = 0;
 
     function initialiser(evt) {
-        //         if (document.body.className == "accueil") {
-        //            var play = document.getElementById("play");
-        //            play.addEventListener("click", lancerWebDoc);
-        //        } else if (document.body.className == "partie1") {
-        //        
+        if (document.body.className == "index") {
+            var fleche = document.querySelector(".scroll");
+            fleche.addEventListener("click", scroll, true);
+        } else if (document.body.className == "methodologie") {
+            $('.slider').each(function () {
+                var $this = $(this);
+                var $group = $this.find('.slide_group');
+                var $slides = $this.find('.slide');
+                var bulletArray = [];
+                var currentIndex = 0;
+                var timeout;
 
-        function envoi() {
-            // par défaut, pas d'envoi
-            document.formu.action = "";
-            // recherche de @ dans l'adresse
-            var address = window.document.formu.adr.value;
-            var pos = address.indexOf("@");
-            if (address == "") {
-                alert("Vous devez donner une adresse e-mail.");
-            } else {
-                if (pos == -1 || pos == 0 || pos == address.length - 1) {
-                    alert("Une adresse e-mail a le format nom@domaine");
-                } else // tout va bien, on envoie le formulaire
-                    document.formu.action = 'mailto:coraline211285@gmail.com?subject="Cours JavaScript"';
-            }
-        }
+                function move(newIndex) {
+                    var animateLeft, slideLeft;
 
+                    advance();
 
-        $('.slider').each(function () {
-            var $this = $(this);
-            var $group = $this.find('.slide_group');
-            var $slides = $this.find('.slide');
-            var bulletArray = [];
-            var currentIndex = 0;
-            var timeout;
+                    if ($group.is(':animated') || currentIndex === newIndex) {
+                        return;
+                    }
 
-            function move(newIndex) {
-                var animateLeft, slideLeft;
+                    bulletArray[currentIndex].removeClass('active');
+                    bulletArray[newIndex].addClass('active');
+
+                    if (newIndex > currentIndex) {
+                        slideLeft = '100%';
+                        animateLeft = '-100%';
+                    } else {
+                        slideLeft = '-100%';
+                        animateLeft = '100%';
+                    }
+
+                    $slides.eq(newIndex).css({
+                        display: 'block',
+                        left: slideLeft
+                    });
+                    $group.animate({
+                        left: animateLeft
+                    }, function () {
+                        $slides.eq(currentIndex).css({
+                            display: 'none'
+                        });
+                        $slides.eq(newIndex).css({
+                            left: 0
+                        });
+                        $group.css({
+                            left: 0
+                        });
+                        currentIndex = newIndex;
+                    });
+                }
+
+                function advance() {
+                    clearTimeout(timeout);
+
+                }
+
+                $('.next_btn').on('click', function () {
+                    if (currentIndex < ($slides.length - 1)) {
+                        move(currentIndex + 1);
+                    } else {
+                        move(0);
+                    }
+                });
+
+                $('.previous_btn').on('click', function () {
+                    if (currentIndex !== 0) {
+                        move(currentIndex - 1);
+                    } else {
+                        move(5);
+                    }
+                });
+
+                $.each($slides, function (index) {
+                    var $button = $('<a class="slide_btn">&bull;</a>');
+
+                    if (index === currentIndex) {
+                        $button.addClass('active');
+                    }
+                    $button.on('click', function () {
+                        move(index);
+                    }).appendTo('.slide_buttons');
+                    bulletArray.push($button);
+                });
 
                 advance();
+            });
 
-                if ($group.is(':animated') || currentIndex === newIndex) {
-                    return;
-                }
 
-                bulletArray[currentIndex].removeClass('active');
-                bulletArray[newIndex].addClass('active');
 
-                if (newIndex > currentIndex) {
-                    slideLeft = '100%';
-                    animateLeft = '-100%';
-                } else {
-                    slideLeft = '-100%';
-                    animateLeft = '100%';
-                }
+        } else if (document.body.className == "jeu") {
+            var lesImgO = document.getElementById("jeuCartes").getElementsByClassName("flip");
+            for (uneImg of lesImgO) {
+                uneImg.addEventListener("click", clickCarte, true);
 
-                $slides.eq(newIndex).css({
-                    display: 'block',
-                    left: slideLeft
-                });
-                $group.animate({
-                    left: animateLeft
-                }, function () {
-                    $slides.eq(currentIndex).css({
-                        display: 'none'
-                    });
-                    $slides.eq(newIndex).css({
-                        left: 0
-                    });
-                    $group.css({
-                        left: 0
-                    });
-                    currentIndex = newIndex;
-                });
+
+                var alea = Math.floor(Math.random() * (27 - (0))) - 1;
+                uneImg.style.order = alea;
             }
 
-            function advance() {
-                clearTimeout(timeout);
+            var lesImgP = document.getElementById("programme").getElementsByClassName("flip");
+            for (uneImg of lesImgP) {
+                uneImg.addEventListener("click", etape3, true);
 
+                var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
+                uneImg.style.order = alea;
             }
 
-            $('.next_btn').on('click', function () {
-                if (currentIndex < ($slides.length - 1)) {
-                    move(currentIndex + 1);
-                } else {
-                    move(0);
-                }
-            });
+            var lesImgOP = document.getElementById("oppoArchi").getElementsByClassName("flip");
+            for (uneImg of lesImgOP) {
+                uneImg.addEventListener("click", etape4, true);
 
-            $('.previous_btn').on('click', function () {
-                if (currentIndex !== 0) {
-                    move(currentIndex - 1);
-                } else {
-                    move(5);
-                }
-            });
+                var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
+                uneImg.style.order = alea;
+            }
 
-            $.each($slides, function (index) {
-                var $button = $('<a class="slide_btn">&bull;</a>');
+            var lesImgS = document.getElementById("site").getElementsByClassName("flip");
+            for (uneImg of lesImgS) {
+                uneImg.addEventListener("click", etape5, true);
 
-                if (index === currentIndex) {
-                    $button.addClass('active');
-                }
-                $button.on('click', function () {
-                    move(index);
-                }).appendTo('.slide_buttons');
-                bulletArray.push($button);
-            });
+                var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
+                uneImg.style.order = alea;
+            }
 
-            advance();
-        });
+            var button1 = document.querySelector(".bouton1");
 
-
-
-
-
-        var lesImgO = document.getElementById("jeuCartes").getElementsByClassName("flip");
-        for (uneImg of lesImgO) {
-            uneImg.addEventListener("click", clickCarte, true);
-
-
-            var alea = Math.floor(Math.random() * (27 - (0))) - 1;
-            uneImg.style.order = alea;
+            button1.addEventListener('click', etape1, true);
         }
-
-        var lesImgP = document.getElementById("programme").getElementsByClassName("flip");
-        for (uneImg of lesImgP) {
-            uneImg.addEventListener("click", etape3, true);
-
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
-
-        var lesImgOP = document.getElementById("oppoArchi").getElementsByClassName("flip");
-        for (uneImg of lesImgOP) {
-            uneImg.addEventListener("click", etape4, true);
-
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
-
-        var lesImgS = document.getElementById("site").getElementsByClassName("flip");
-        for (uneImg of lesImgS) {
-            uneImg.addEventListener("click", etape5, true);
-
-            var alea = Math.floor(Math.random() * (1 - (-1) + 1)) - 1;
-            uneImg.style.order = alea;
-        }
-
-        var button1 = document.querySelector(".bouton1");
-
-        button1.addEventListener('click', etape1, true);
-
-
     }
 
+
+    /********************************   ACCUEIL    ******************************/
+
+    function scroll(evt) {
+
+        var regle = document.querySelector(".regleA");
+        regle.style.display = "block";
+
+        var accueil = document.querySelector(".accueil");
+        accueil.style.transform = "translateX(0%) translateY(-100%)";
+        accueil.style.transition = "transform 0.6s cubic-bezier(0.77, 0.2, 0.05, 1.0)";
+    }
+
+    /*******************************   JEU    ***********************************/
 
     function etape1(evt) {
         const bouton1 = document.querySelector('.bouton1');
