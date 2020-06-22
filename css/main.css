@@ -34,7 +34,7 @@ html {
     background: white;
     font: 20px Roboto;
     color: black;
-    margin: 80px auto 0;
+    margin: 80px auto ;
     display: flex;
     width: 150px;
 }
