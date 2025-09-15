@@ -1271,11 +1271,7 @@ body {
 
 footer p {
     position: fixed;
-    display: -webkit-flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
+   text-align : center;
     margin: 0;
     width: 100vw;
     bottom: 0;
