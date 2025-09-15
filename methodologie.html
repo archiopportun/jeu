@@ -171,11 +171,17 @@
         </section>
     </div>
 
-    <footer>
-        <p>Coraline Paquet © 2020 - Tous droits réservés</p>
-    </footer>
+  <footer>
+  <p>Coraline Paquet © <span id="year"></span> - Tous droits réservés</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 
 </html>
+
